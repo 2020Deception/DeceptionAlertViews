@@ -1,0 +1,14 @@
+PODS:
+  - DeceptionAlertViews (0.1.0)
+
+DEPENDENCIES:
+  - DeceptionAlertViews (from `../`)
+
+EXTERNAL SOURCES:
+  DeceptionAlertViews:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DeceptionAlertViews: cd2d7f1dc5076e29f5e93838d9f937547f43494b
+
+COCOAPODS: 0.35.0
