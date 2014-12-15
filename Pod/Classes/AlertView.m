@@ -15,7 +15,6 @@ static NSString * const kEmptyString = @"";
 @property NSArray *completionBlocks;
 @property (copy, nonatomic) AlertCompletionBlock dismissalBlock;
 @property (copy, nonatomic) AlertCancelBlock cancelBlock;
-@property (copy, nonatomic) TestBlock testBlock;
 @end
 
 @implementation AlertView
@@ -23,90 +22,206 @@ static NSString * const kEmptyString = @"";
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if(self.testBlock) {
-        self.testBlock(buttonIndex == self.cancelButtonIndex, buttonIndex);
-    } else if (buttonIndex==alertView.cancelButtonIndex && self.cancelBlock) {
-        void (^cancelBlock)() = self.cancelBlock;
-        cancelBlock();
-    }
-    else if (self.completionBlocks[buttonIndex]) {
-        void (^completionBlock)() = self.completionBlocks[buttonIndex];
+    if (buttonIndex==alertView.cancelButtonIndex) {
+        if (self.cancelBlock) {
+            void (^cancelBlock)() = self.cancelBlock;
+            cancelBlock();
+        }
+    } else if (self.completionBlocks[buttonIndex-1]) {
+        void (^completionBlock)() = self.completionBlocks[buttonIndex-1];
         completionBlock();
     }
 }
 
 #pragma mark - alert view
-
-- (id)initWithTitle:(NSString *)title
-            message:(NSString *)message
-    completionBlock:(void (^)(BOOL cancelled, NSInteger buttonIndex))completionBlock
-  cancelButtonTitle:(NSString *)cancelButtonTitle
-  otherButtonTitles:(NSArray *)otherButtonTitles {
-    if ((self = [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil])) {
-        self.delegate = self;
-        self.testBlock = completionBlock;
-        
-        for(NSString *otherButtonTitle in otherButtonTitles)
-            [self addButtonWithTitle:otherButtonTitle];
-    }
-    
-    return self;
-}
+/*!
+ * creates UIAlertView
+ @param title
+ @param message
+ @param alertCancelBlock the block called if the cancel button is pressed
+ @param completionBlocks the array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
+ @param cancelButtonTitle the cancel button title as an NSString
+ @param otherButtonTitles the array of titles as NSStrings for the other button titles
+ */
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
-                 ccancelBlock:(AlertCancelBlock)alertCancelBlock
+                  cancelBlock:(AlertCancelBlock)alertCancelBlock
              completionBlocks:(NSArray *)completionBlocks
             cancelButtonTitle:(NSString *)cancelButtonTitle
             otherButtonTitles:(NSArray *)otherButtonTitles {
     if ((self = [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil])) {
         self.delegate = self;
-        self.cancelBlock = alertCancelBlock;
-        self.completionBlocks = completionBlocks;
-        self.testBlock = nil;
-        for(NSString *otherButtonTitle in otherButtonTitles)
-            [self addButtonWithTitle:otherButtonTitle];
+        self.cancelBlock = alertCancelBlock ? : ^{};
+        self.completionBlocks = completionBlocks ? : @[];
+        __unsafe_unretained typeof(self) weakSelf = self;
+        [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf addButtonWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""];
+        }];
     }
-    
     return self;
 }
 
 #pragma mark - alert controller
-
+/*!
+ * creates UIAlertController
+ @param title
+ @param message
+ @param alertCancelBlock the block called if the cancel button is pressed
+ @param completionBlocks the array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
+ @param cancelButtonTitle the cancel button title as an NSString
+ @param otherButtonTitles the array of titles as NSStrings for the other button titles
+ */
 + (UIAlertController *)createAlertControllerWithTitle:(NSString *)title
                                               message:(NSString *)message
-                                         ccancelBlock:(AlertCancelBlock)alertCancelBlock
+                                          cancelBlock:(AlertCancelBlock)alertCancelBlock
                                      completionBlocks:(NSArray *)completionBlocks
                                     cancelButtonTitle:(NSString *)cancelButtonTitle
-                                    otherButtonTitles:(NSArray *)otherButtonTitles {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel handler:alertCancelBlock]];
-    if (completionBlocks.count > 0) {
-        int i = 0;
-        for (NSString *buttonTitle in otherButtonTitles) {
-            [alert addAction:[UIAlertAction actionWithTitle:buttonTitle style:UIAlertActionStyleDefault handler:completionBlocks[i]]];
-            i += 1;
-        }
-    }
+                                    otherButtonTitles:(NSArray *)otherButtonTitles
+                                                 type:(UIAlertControllerStyle)type {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:type];
+    [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle
+                                              style:UIAlertActionStyleCancel
+                                            handler:alertCancelBlock]];
+    [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [alert addAction:[UIAlertAction actionWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""
+                                                  style:UIAlertActionStyleDefault
+                                                handler:completionBlocks[idx]]];
+    }];
     return alert;
 }
 
 #pragma mark - meat and potatoes
 
-+ (void)returnAlertWithTitle:(NSString *)title
-                     message:(NSString *)message
-                 cancelBlock:(AlertCancelBlock)alertCancelBlock
-            completionBlocks:(NSArray *)completionBlocks
++ (void)showAlertWithMessage:(NSString *)message
            cancelButtonTitle:(NSString *)cancelButtonTitle
-           otherButtonTitles:(NSArray *)otherButtonTitles
-    presentingViewController:(UIViewController *)presentingViewController
-                    animated:(BOOL)animated
-             completionBlock:(AlertCompletionBlock)alertCompletionBlock {
-    if (NSClassFromString(@"UIAlertController"))
-        [presentingViewController presentViewController:[AlertView createAlertControllerWithTitle:title ? : kEmptyString message:message ? : kEmptyString ccancelBlock:alertCancelBlock completionBlocks:completionBlocks cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles] animated:animated completion:alertCompletionBlock];
-    else
-        [[[AlertView alloc]initWithTitle:title ? : kEmptyString message:message ? : kEmptyString ccancelBlock:alertCancelBlock completionBlocks:completionBlocks cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles] show];
-    
+    presentingViewController:(UIViewController *)presentingViewController {
+    [AlertView showAlertWithTitle:nil
+                          message:message
+                      cancelBlock:nil
+                cancelButtonTitle:cancelButtonTitle
+         presentingViewController:presentingViewController
+                         animated:YES
+                  completionBlock:nil];
 }
 
++ (void)showAlertWithMessage:(NSString *)message
+           cancelButtonTitle:(NSString *)cancelButtonTitle
+    presentingViewController:(UIViewController *)presentingViewController
+                    animated:(BOOL)animated {
+    [AlertView showAlertWithTitle:nil
+                          message:message
+                      cancelBlock:nil
+                cancelButtonTitle:cancelButtonTitle
+         presentingViewController:presentingViewController
+                         animated:animated
+                  completionBlock:nil];
+}
+
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+  presentingViewController:(UIViewController *)presentingViewController
+                  animated:(BOOL)animated {
+    [AlertView showAlertWithTitle:title
+                          message:message
+                      cancelBlock:nil
+                cancelButtonTitle:cancelButtonTitle
+         presentingViewController:presentingViewController
+                         animated:animated
+                  completionBlock:nil];
+}
+
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
+               cancelBlock:(AlertCancelBlock)alertCancelBlock
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+  presentingViewController:(UIViewController *)presentingViewController
+                  animated:(BOOL)animated
+           completionBlock:(AlertCompletionBlock)alertCompletionBlock {
+    [AlertView showAlertWithTitle:title
+                          message:message
+                      cancelBlock:alertCancelBlock
+                 completionBlocks:nil
+                cancelButtonTitle:cancelButtonTitle
+                otherButtonTitles:nil
+         presentingViewController:presentingViewController
+                             type:UIAlertControllerStyleAlert
+                         animated:animated
+                  completionBlock:alertCompletionBlock];
+}
+
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
+               cancelBlock:(AlertCancelBlock)alertCancelBlock
+          completionBlocks:(NSArray *)completionBlocks
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+         otherButtonTitles:(NSArray *)otherButtonTitles
+  presentingViewController:(UIViewController *)presentingViewController
+                      type:(UIAlertControllerStyle)type
+                  animated:(BOOL)animated
+           completionBlock:(AlertCompletionBlock)alertCompletionBlock {
+#ifdef DEBUG
+    for (NSString *title in otherButtonTitles)
+        if (title.length == 0)
+            NSLog(@"WARNING : there needs to be a title for every button.");
+    if (cancelButtonTitle.length == 0)
+        NSLog(@"WARNING : there needs to be a title for the cancel button.");
+    if (completionBlocks.count != otherButtonTitles.count)
+        NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
+#endif
+    dispatch_async(dispatch_get_main_queue(), ^{
+        id alert = [AlertView returnAlertWithTitle:title.length > 0 ? title : kEmptyString
+                                           message:message.length > 0 ? message : kEmptyString
+                                       cancelBlock:alertCancelBlock
+                                  completionBlocks:completionBlocks
+                                 cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                                 otherButtonTitles:otherButtonTitles
+                          presentingViewController:presentingViewController
+                                              type:(UIAlertControllerStyle)type
+                                          animated:animated
+                                   completionBlock:alertCompletionBlock];
+        
+        (NSClassFromString(@"UIAlertController")) ?
+        [presentingViewController presentViewController:(UIAlertController *)alert animated:animated completion:alertCompletionBlock] :
+        [(UIAlertView *)alert show];
+    });
+}
+
++ (id)returnAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
+               cancelBlock:(AlertCancelBlock)alertCancelBlock
+          completionBlocks:(NSArray *)completionBlocks
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+         otherButtonTitles:(NSArray *)otherButtonTitles
+  presentingViewController:(UIViewController *)presentingViewController
+                      type:(UIAlertControllerStyle)type
+                  animated:(BOOL)animated
+           completionBlock:(AlertCompletionBlock)alertCompletionBlock {
+#ifdef DEBUG
+    for (NSString *title in otherButtonTitles)
+        if (title.length == 0)
+            NSLog(@"WARNING : there needs to be a title for every button.");
+    if (cancelButtonTitle.length == 0)
+        NSLog(@"WARNING : there needs to be a title for the cancel button.");
+    if (completionBlocks.count != otherButtonTitles.count)
+        NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
+#endif
+    return (NSClassFromString(@"UIAlertController")) ?
+    [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
+                                      message:message.length > 0 ? message : kEmptyString
+                                  cancelBlock:alertCancelBlock
+                             completionBlocks:completionBlocks
+                            cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                            otherButtonTitles:otherButtonTitles
+                                         type:(UIAlertControllerStyle)type] :
+    
+    [[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
+                            message:message.length > 0 ? message : kEmptyString
+                        cancelBlock:alertCancelBlock
+                   completionBlocks:completionBlocks
+                  cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                  otherButtonTitles:otherButtonTitles];
+}
 
 @end

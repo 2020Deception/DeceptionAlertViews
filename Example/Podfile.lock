@@ -1,5 +1,5 @@
 PODS:
-  - DeceptionAlertViews (0.1.0)
+  - DeceptionAlertViews (0.4.0)
 
 DEPENDENCIES:
   - DeceptionAlertViews (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DeceptionAlertViews: cd2d7f1dc5076e29f5e93838d9f937547f43494b
+  DeceptionAlertViews: 9768833c8c704f21f679c70ce56e6c1f4cf89696
 
 COCOAPODS: 0.35.0
