@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/2020Deception/DeceptionAlertViews"
   s.license          = 'MIT'
   s.author           = { "Anonymous" => "2020deception@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DeceptionAlertViews.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/2020Deception/DeceptionAlertViews.git", :tag => s.version.to_s }
   s.platform     = :ios, '4.3'
   s.requires_arc = true
   s.source_files = 'Pod/Classes'
