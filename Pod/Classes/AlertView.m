@@ -15,7 +15,6 @@ static NSString * const kEmptyString = @"";
 @property NSArray *completionBlocks;
 @property (copy, nonatomic) AlertCompletionBlock dismissalBlock;
 @property (copy, nonatomic) AlertCancelBlock cancelBlock;
-@property (copy, nonatomic) TestBlock testBlock;
 @end
 
 @implementation AlertView
@@ -23,13 +22,12 @@ static NSString * const kEmptyString = @"";
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if(self.testBlock) {
-        self.testBlock(buttonIndex == self.cancelButtonIndex, buttonIndex);
-    } else if (buttonIndex==alertView.cancelButtonIndex && self.cancelBlock) {
-        void (^cancelBlock)() = self.cancelBlock;
-        cancelBlock();
-    }
-    else if (self.completionBlocks[buttonIndex]) {
+    if (buttonIndex==alertView.cancelButtonIndex) {
+        if (self.cancelBlock) {
+            void (^cancelBlock)() = self.cancelBlock;
+            cancelBlock();
+        }
+    } else if (self.completionBlocks[buttonIndex]) {
         void (^completionBlock)() = self.completionBlocks[buttonIndex];
         completionBlock();
     }
@@ -37,21 +35,6 @@ static NSString * const kEmptyString = @"";
 
 #pragma mark - alert view
 
-- (id)initWithTitle:(NSString *)title
-            message:(NSString *)message
-    completionBlock:(void (^)(BOOL cancelled, NSInteger buttonIndex))completionBlock
-  cancelButtonTitle:(NSString *)cancelButtonTitle
-  otherButtonTitles:(NSArray *)otherButtonTitles {
-    if ((self = [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil])) {
-        self.delegate = self;
-        self.testBlock = completionBlock;
-        
-        for(NSString *otherButtonTitle in otherButtonTitles)
-            [self addButtonWithTitle:otherButtonTitle];
-    }
-    
-    return self;
-}
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
                  ccancelBlock:(AlertCancelBlock)alertCancelBlock
@@ -62,7 +45,6 @@ static NSString * const kEmptyString = @"";
         self.delegate = self;
         self.cancelBlock = alertCancelBlock;
         self.completionBlocks = completionBlocks;
-        self.testBlock = nil;
         for(NSString *otherButtonTitle in otherButtonTitles)
             [self addButtonWithTitle:otherButtonTitle];
     }
@@ -71,7 +53,15 @@ static NSString * const kEmptyString = @"";
 }
 
 #pragma mark - alert controller
-
+/*!
+ * creates UIAlertController
+ @param title
+ @param message
+ @param alertCancelBlock the block called if the cancel button is pressed
+ @param completionBlocks - array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
+ @param cancelButtonTitle
+ @param otherButtonTitles
+ */
 + (UIAlertController *)createAlertControllerWithTitle:(NSString *)title
                                               message:(NSString *)message
                                          ccancelBlock:(AlertCancelBlock)alertCancelBlock
