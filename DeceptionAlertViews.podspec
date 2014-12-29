@@ -5,8 +5,8 @@ s.summary          = 'gives an appropriate UIAlertView or UIAlertController depe
 s.homepage         = 'https://github.com/2020Deception/DeceptionAlertViews'
 s.license          = 'MIT'
 s.authors          = { 'Anonymous' => '2020deception@gmail.com' }
-s.source           =  { :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :tag => '0.3.0' }
-s.platform     = :ios, '8.0'
+s.source           =  { :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :tag => 'v0.3.0' }
+s.platform     = :ios, '4.3'
 s.requires_arc = true
 s.source_files = 'Pod/Classes/AlertView.{h,m}'
 s.frameworks = 'UIKit'

@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+This is designed to be used with apps that support both iOS 7 and iOS 8. Versions prior to 0.3.0 should not be used.
+
 ## Installation
 
 DeceptionAlertViews is available through [CocoaPods](http://cocoapods.org). To install
