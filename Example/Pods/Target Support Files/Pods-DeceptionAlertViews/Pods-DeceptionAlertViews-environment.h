@@ -9,6 +9,6 @@
 // DeceptionAlertViews
 #define COCOAPODS_POD_AVAILABLE_DeceptionAlertViews
 #define COCOAPODS_VERSION_MAJOR_DeceptionAlertViews 0
-#define COCOAPODS_VERSION_MINOR_DeceptionAlertViews 1
+#define COCOAPODS_VERSION_MINOR_DeceptionAlertViews 4
 #define COCOAPODS_VERSION_PATCH_DeceptionAlertViews 0
 
