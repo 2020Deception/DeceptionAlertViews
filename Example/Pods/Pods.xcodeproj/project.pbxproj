@@ -7,194 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FDA0E231A528114000F8D0D /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA0E221A528114000F8D0D /* AlertView.m */; };
-		34CE237934F83C8B27F533B4 /* Pods-DeceptionAlertViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2FE6F29D0728E84F956946 /* Pods-DeceptionAlertViews-dummy.m */; };
-		5F3A57618D0E389C4A705E1C /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 567AD37D41B162CF2B1BE64F /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */; };
-		710E58C98733C5EADA83A068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073D2F456494BC03ABD5EF4A /* Foundation.framework */; };
-		9FA95BE91B508C1F6E33D106 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034D50E5011542F1276184F9 /* UIKit.framework */; };
-		D48D238508597203EEAC9592 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073D2F456494BC03ABD5EF4A /* Foundation.framework */; };
+		1FDA0E291A52828D000F8D0D /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA0E271A52828D000F8D0D /* AlertView.m */; };
+		33C31E698AADE1C1E44D9312 /* Pods-DeceptionAlertViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C7701FF021D35BE7E6C16 /* Pods-DeceptionAlertViews-dummy.m */; };
+		89AD04446B5C462938A54777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6338A3E7F1A48103A69FAA41 /* Foundation.framework */; };
+		B75C747885B5502EA2B63393 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6876CB5E6D485E3660C18281 /* UIKit.framework */; };
+		D2A6835FA05D9C2CDEE24E85 /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0598C6BA83BE523823A506AE /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */; };
+		FCB1B38039588B9F1A8753A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6338A3E7F1A48103A69FAA41 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6530DF8A503F52B78D49B4E6 /* PBXContainerItemProxy */ = {
+		EC946C783D456B1782297E73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 842322B71DADD367F64930E5 /* Project object */;
+			containerPortal = A5E7C331765462E2CE148B1E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6863FD3561EDF8E18926ABA5;
+			remoteGlobalIDString = 54F32467A2639DDC864D7A0C;
 			remoteInfo = "Pods-DeceptionAlertViews-DeceptionAlertViews";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		034D50E5011542F1276184F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		073D2F456494BC03ABD5EF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		1FDA0E211A528114000F8D0D /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
-		1FDA0E221A528114000F8D0D /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
-		2E32D0BF84688DB65045F6F8 /* Pods-DeceptionAlertViews-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeceptionAlertViews-acknowledgements.markdown"; sourceTree = "<group>"; };
-		328C9431C8A3F07572DD4CDA /* Pods-DeceptionAlertViews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews.debug.xcconfig"; sourceTree = "<group>"; };
-		55425320F7BC62FD4A86F16B /* Pods-DeceptionAlertViews-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeceptionAlertViews-resources.sh"; sourceTree = "<group>"; };
-		567AD37D41B162CF2B1BE64F /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m"; sourceTree = "<group>"; };
-		633707423630A7D581EA886C /* Pods-DeceptionAlertViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews.release.xcconfig"; sourceTree = "<group>"; };
-		6B2FE6F29D0728E84F956946 /* Pods-DeceptionAlertViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeceptionAlertViews-dummy.m"; sourceTree = "<group>"; };
-		778AD0F58EC277D78E0EDB30 /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeceptionAlertViews-DeceptionAlertViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78A704708A15C1CA6CA2C65B /* Pods-DeceptionAlertViews-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeceptionAlertViews-acknowledgements.plist"; sourceTree = "<group>"; };
-		8CDD5086FC1DEE34E36B0725 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		92890A93CA7D97CFB944CFBA /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig"; sourceTree = "<group>"; };
-		9C57726872C07C9D918E82C7 /* Pods-DeceptionAlertViews-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeceptionAlertViews-environment.h"; sourceTree = "<group>"; };
-		E48EB763F32DA786448B091D /* Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig"; sourceTree = "<group>"; };
-		E4B8C524C83EEB385D00F76E /* Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch"; sourceTree = "<group>"; };
-		F99297B265045C9828339540 /* libPods-DeceptionAlertViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeceptionAlertViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B4CA963597F4504415FAA6 /* Pods-DeceptionAlertViews-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeceptionAlertViews-resources.sh"; sourceTree = "<group>"; };
+		0598C6BA83BE523823A506AE /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m"; sourceTree = "<group>"; };
+		0F30BB9266185EB23E9D279B /* Pods-DeceptionAlertViews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews.debug.xcconfig"; sourceTree = "<group>"; };
+		0F72D7AFBFE64B2ACD120B6C /* libPods-DeceptionAlertViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeceptionAlertViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A01D82EEC0BB04EBD46EAA1 /* Pods-DeceptionAlertViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews.release.xcconfig"; sourceTree = "<group>"; };
+		1FDA0E271A52828D000F8D0D /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertView.m; path = Pod/Classes/AlertView.m; sourceTree = "<group>"; };
+		1FDA0E281A52828D000F8D0D /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertView.h; path = Pod/Classes/AlertView.h; sourceTree = "<group>"; };
+		3D0111F6C93F1C37D9E961AB /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig"; sourceTree = "<group>"; };
+		4C8CC20D28E8092D7A9A8093 /* Pods-DeceptionAlertViews-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeceptionAlertViews-environment.h"; sourceTree = "<group>"; };
+		6338A3E7F1A48103A69FAA41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		63FEC5ABA0714D8C3A5ED697 /* Pods-DeceptionAlertViews-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeceptionAlertViews-acknowledgements.plist"; sourceTree = "<group>"; };
+		6876CB5E6D485E3660C18281 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7209D94660C94E0A28FAE9AF /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8C8E5D70AF56EBF878C78C67 /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeceptionAlertViews-DeceptionAlertViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4C7701FF021D35BE7E6C16 /* Pods-DeceptionAlertViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeceptionAlertViews-dummy.m"; sourceTree = "<group>"; };
+		A1D190C3B59E925F9BA15F7F /* Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch"; sourceTree = "<group>"; };
+		B1679D9E2999DD90CB5A0977 /* Pods-DeceptionAlertViews-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeceptionAlertViews-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF01543AF9419DC44B3E7CFD /* Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		88373D2D5F16AF85682CB714 /* Frameworks */ = {
+		1979EB0510CAC89CDF1CE551 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48D238508597203EEAC9592 /* Foundation.framework in Frameworks */,
-				9FA95BE91B508C1F6E33D106 /* UIKit.framework in Frameworks */,
+				89AD04446B5C462938A54777 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EEF233AAB6EF18C86F27172 /* Frameworks */ = {
+		A2DF66C1A23F8B8546D59243 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				710E58C98733C5EADA83A068 /* Foundation.framework in Frameworks */,
+				FCB1B38039588B9F1A8753A8 /* Foundation.framework in Frameworks */,
+				B75C747885B5502EA2B63393 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28BCBE18319E1417A6E31584 /* Support Files */ = {
+		1D4A7DF35170F8E1083C7A64 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E48EB763F32DA786448B091D /* Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig */,
-				92890A93CA7D97CFB944CFBA /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */,
-				567AD37D41B162CF2B1BE64F /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */,
-				E4B8C524C83EEB385D00F76E /* Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch */,
+				EB5FDBEE99C4146BF06C3E5B /* Pods-DeceptionAlertViews */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3D95D67DBC367E6086CC769D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55ACF511CC81EE919804BCC6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55ACF511CC81EE919804BCC6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6338A3E7F1A48103A69FAA41 /* Foundation.framework */,
+				6876CB5E6D485E3660C18281 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		727636F68F46769F62559F99 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E82CC92048DAF45E7E6589FC /* DeceptionAlertViews */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		775DD8954D6ECE7EA8EB305D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF01543AF9419DC44B3E7CFD /* Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig */,
+				3D0111F6C93F1C37D9E961AB /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */,
+				0598C6BA83BE523823A506AE /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */,
+				A1D190C3B59E925F9BA15F7F /* Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews";
 			sourceTree = "<group>";
 		};
-		5259BA487C07DC928815CB1F /* Frameworks */ = {
+		7FD129CEF10C1A5329C25E9F = {
 			isa = PBXGroup;
 			children = (
-				8FD1D169308656ECE11B1C19 /* iOS */,
+				7209D94660C94E0A28FAE9AF /* Podfile */,
+				727636F68F46769F62559F99 /* Development Pods */,
+				3D95D67DBC367E6086CC769D /* Frameworks */,
+				A3BABD67CF7C6732BD68807A /* Products */,
+				1D4A7DF35170F8E1083C7A64 /* Targets Support Files */,
 			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		59CA7F52998628BF5B215712 /* DeceptionAlertViews */ = {
+		A3BABD67CF7C6732BD68807A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FDA0E211A528114000F8D0D /* AlertView.h */,
-				1FDA0E221A528114000F8D0D /* AlertView.m */,
-				28BCBE18319E1417A6E31584 /* Support Files */,
+				0F72D7AFBFE64B2ACD120B6C /* libPods-DeceptionAlertViews.a */,
+				8C8E5D70AF56EBF878C78C67 /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E82CC92048DAF45E7E6589FC /* DeceptionAlertViews */ = {
+			isa = PBXGroup;
+			children = (
+				1FDA0E281A52828D000F8D0D /* AlertView.h */,
+				1FDA0E271A52828D000F8D0D /* AlertView.m */,
+				775DD8954D6ECE7EA8EB305D /* Support Files */,
 			);
 			name = DeceptionAlertViews;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		8C56194D82F004032821F4AE /* Development Pods */ = {
+		EB5FDBEE99C4146BF06C3E5B /* Pods-DeceptionAlertViews */ = {
 			isa = PBXGroup;
 			children = (
-				59CA7F52998628BF5B215712 /* DeceptionAlertViews */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		8FD1D169308656ECE11B1C19 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				073D2F456494BC03ABD5EF4A /* Foundation.framework */,
-				034D50E5011542F1276184F9 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		90E895D036693C91A374A9F2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F99297B265045C9828339540 /* libPods-DeceptionAlertViews.a */,
-				778AD0F58EC277D78E0EDB30 /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9186AF781A16A804396B110E /* Pods-DeceptionAlertViews */ = {
-			isa = PBXGroup;
-			children = (
-				2E32D0BF84688DB65045F6F8 /* Pods-DeceptionAlertViews-acknowledgements.markdown */,
-				78A704708A15C1CA6CA2C65B /* Pods-DeceptionAlertViews-acknowledgements.plist */,
-				6B2FE6F29D0728E84F956946 /* Pods-DeceptionAlertViews-dummy.m */,
-				9C57726872C07C9D918E82C7 /* Pods-DeceptionAlertViews-environment.h */,
-				55425320F7BC62FD4A86F16B /* Pods-DeceptionAlertViews-resources.sh */,
-				328C9431C8A3F07572DD4CDA /* Pods-DeceptionAlertViews.debug.xcconfig */,
-				633707423630A7D581EA886C /* Pods-DeceptionAlertViews.release.xcconfig */,
+				B1679D9E2999DD90CB5A0977 /* Pods-DeceptionAlertViews-acknowledgements.markdown */,
+				63FEC5ABA0714D8C3A5ED697 /* Pods-DeceptionAlertViews-acknowledgements.plist */,
+				9A4C7701FF021D35BE7E6C16 /* Pods-DeceptionAlertViews-dummy.m */,
+				4C8CC20D28E8092D7A9A8093 /* Pods-DeceptionAlertViews-environment.h */,
+				01B4CA963597F4504415FAA6 /* Pods-DeceptionAlertViews-resources.sh */,
+				0F30BB9266185EB23E9D279B /* Pods-DeceptionAlertViews.debug.xcconfig */,
+				1A01D82EEC0BB04EBD46EAA1 /* Pods-DeceptionAlertViews.release.xcconfig */,
 			);
 			name = "Pods-DeceptionAlertViews";
 			path = "Target Support Files/Pods-DeceptionAlertViews";
 			sourceTree = "<group>";
 		};
-		D6F72844279E922A3DAC1BB8 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9186AF781A16A804396B110E /* Pods-DeceptionAlertViews */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		D7312F57E64935B9F39F45D9 = {
-			isa = PBXGroup;
-			children = (
-				8CDD5086FC1DEE34E36B0725 /* Podfile */,
-				8C56194D82F004032821F4AE /* Development Pods */,
-				5259BA487C07DC928815CB1F /* Frameworks */,
-				90E895D036693C91A374A9F2 /* Products */,
-				D6F72844279E922A3DAC1BB8 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		E1462E872EC71E6396150157 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		4A16BA3440FA93A0E18907FE /* Pods-DeceptionAlertViews */ = {
+		54F32467A2639DDC864D7A0C /* Pods-DeceptionAlertViews-DeceptionAlertViews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F5263D2560C63E1B9D4A504 /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews" */;
+			buildConfigurationList = 795375A3B9284D490B6961AD /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews-DeceptionAlertViews" */;
 			buildPhases = (
-				ABA6CB0DB3BBF17552AB78C6 /* Sources */,
-				8EEF233AAB6EF18C86F27172 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C3B7D577E71F6B6F4D2EFB7C /* PBXTargetDependency */,
-			);
-			name = "Pods-DeceptionAlertViews";
-			productName = "Pods-DeceptionAlertViews";
-			productReference = F99297B265045C9828339540 /* libPods-DeceptionAlertViews.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		6863FD3561EDF8E18926ABA5 /* Pods-DeceptionAlertViews-DeceptionAlertViews */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB0A512D5EC59D5784411D98 /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews-DeceptionAlertViews" */;
-			buildPhases = (
-				B00202A69390021964DE607C /* Sources */,
-				88373D2D5F16AF85682CB714 /* Frameworks */,
-				E1462E872EC71E6396150157 /* Headers */,
+				FB7D72E43F27DE9115B290B3 /* Sources */,
+				A2DF66C1A23F8B8546D59243 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,66 +174,83 @@
 			);
 			name = "Pods-DeceptionAlertViews-DeceptionAlertViews";
 			productName = "Pods-DeceptionAlertViews-DeceptionAlertViews";
-			productReference = 778AD0F58EC277D78E0EDB30 /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */;
+			productReference = 8C8E5D70AF56EBF878C78C67 /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7DAD123C7DE09991E9C45D3 /* Pods-DeceptionAlertViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D53258A14700E8D8A0059CF /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews" */;
+			buildPhases = (
+				D4D58C18DEDA7FF593EA9DED /* Sources */,
+				1979EB0510CAC89CDF1CE551 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB4B04BC1A885537489DCA83 /* PBXTargetDependency */,
+			);
+			name = "Pods-DeceptionAlertViews";
+			productName = "Pods-DeceptionAlertViews";
+			productReference = 0F72D7AFBFE64B2ACD120B6C /* libPods-DeceptionAlertViews.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		842322B71DADD367F64930E5 /* Project object */ = {
+		A5E7C331765462E2CE148B1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 0B455AF2EBC16C0929552FD6 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 423DB8C57C5ECCC1AE22BE7A /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D7312F57E64935B9F39F45D9;
-			productRefGroup = 90E895D036693C91A374A9F2 /* Products */;
+			mainGroup = 7FD129CEF10C1A5329C25E9F;
+			productRefGroup = A3BABD67CF7C6732BD68807A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A16BA3440FA93A0E18907FE /* Pods-DeceptionAlertViews */,
-				6863FD3561EDF8E18926ABA5 /* Pods-DeceptionAlertViews-DeceptionAlertViews */,
+				E7DAD123C7DE09991E9C45D3 /* Pods-DeceptionAlertViews */,
+				54F32467A2639DDC864D7A0C /* Pods-DeceptionAlertViews-DeceptionAlertViews */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ABA6CB0DB3BBF17552AB78C6 /* Sources */ = {
+		D4D58C18DEDA7FF593EA9DED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34CE237934F83C8B27F533B4 /* Pods-DeceptionAlertViews-dummy.m in Sources */,
-				1FDA0E231A528114000F8D0D /* AlertView.m in Sources */,
+				33C31E698AADE1C1E44D9312 /* Pods-DeceptionAlertViews-dummy.m in Sources */,
+				1FDA0E291A52828D000F8D0D /* AlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B00202A69390021964DE607C /* Sources */ = {
+		FB7D72E43F27DE9115B290B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F3A57618D0E389C4A705E1C /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m in Sources */,
+				D2A6835FA05D9C2CDEE24E85 /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C3B7D577E71F6B6F4D2EFB7C /* PBXTargetDependency */ = {
+		DB4B04BC1A885537489DCA83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DeceptionAlertViews-DeceptionAlertViews";
-			target = 6863FD3561EDF8E18926ABA5 /* Pods-DeceptionAlertViews-DeceptionAlertViews */;
-			targetProxy = 6530DF8A503F52B78D49B4E6 /* PBXContainerItemProxy */;
+			target = 54F32467A2639DDC864D7A0C /* Pods-DeceptionAlertViews-DeceptionAlertViews */;
+			targetProxy = EC946C783D456B1782297E73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		42EE3CFA1EF76B3A2A004FBA /* Release */ = {
+		73C1A0BE710F706AE0E91D6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,9 +281,35 @@
 			};
 			name = Release;
 		};
-		4B1238CD6F07E5504776E13A /* Release */ = {
+		9ABDB7BFFC1DD62D39C514E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 633707423630A7D581EA886C /* Pods-DeceptionAlertViews.release.xcconfig */;
+			baseConfigurationReference = 0F30BB9266185EB23E9D279B /* Pods-DeceptionAlertViews.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E48609FAB57AB3BD87519D23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A01D82EEC0BB04EBD46EAA1 /* Pods-DeceptionAlertViews.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -320,7 +335,63 @@
 			};
 			name = Release;
 		};
-		59521EE45304C2DBA5D5DE8B /* Debug */ = {
+		EAAE0885081F1EE8EF93AE33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D0111F6C93F1C37D9E961AB /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F8465E9F2871DC1A76A3C339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D0111F6C93F1C37D9E961AB /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCD1475F09492FC0074D2092 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -356,119 +427,37 @@
 			};
 			name = Debug;
 		};
-		7A6F073B63D39AB16FFAA5DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92890A93CA7D97CFB944CFBA /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		EAF723683A7D82260AE8B7F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 328C9431C8A3F07572DD4CDA /* Pods-DeceptionAlertViews.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F0CB979808535350BBD9CB1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92890A93CA7D97CFB944CFBA /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B455AF2EBC16C0929552FD6 /* Build configuration list for PBXProject "Pods" */ = {
+		0D53258A14700E8D8A0059CF /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59521EE45304C2DBA5D5DE8B /* Debug */,
-				42EE3CFA1EF76B3A2A004FBA /* Release */,
+				9ABDB7BFFC1DD62D39C514E8 /* Debug */,
+				E48609FAB57AB3BD87519D23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F5263D2560C63E1B9D4A504 /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews" */ = {
+		423DB8C57C5ECCC1AE22BE7A /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EAF723683A7D82260AE8B7F3 /* Debug */,
-				4B1238CD6F07E5504776E13A /* Release */,
+				FCD1475F09492FC0074D2092 /* Debug */,
+				73C1A0BE710F706AE0E91D6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB0A512D5EC59D5784411D98 /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews-DeceptionAlertViews" */ = {
+		795375A3B9284D490B6961AD /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews-DeceptionAlertViews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A6F073B63D39AB16FFAA5DE /* Debug */,
-				F0CB979808535350BBD9CB1F /* Release */,
+				EAAE0885081F1EE8EF93AE33 /* Debug */,
+				F8465E9F2871DC1A76A3C339 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 842322B71DADD367F64930E5 /* Project object */;
+	rootObject = A5E7C331765462E2CE148B1E /* Project object */;
 }
