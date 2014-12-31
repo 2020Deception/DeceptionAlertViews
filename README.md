@@ -7,18 +7,27 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+The method you will use for showing your alertviews will be :
++ (void)returnAlertWithTitle:(NSString *)title
+                message:(NSString *)message
+             cancelBlock:(AlertCancelBlock)alertCancelBlock
+         completionBlocks:(NSArray *)completionBlocks
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+         otherButtonTitles:(NSArray *)otherButtonTitles
+   presentingViewController:(UIViewController *)presentingViewController
+               animated:(BOOL)animated
+          completionBlock:(AlertCompletionBlock)alertCompletionBlock;
+Note : the alertCancelBlock is an actual block or ^{} that you will provide as the parameter and completionBlocks is an array of blocks you will pass in with the index corresponding the index of the button in the otherButtonTitles array.
 
 ## Requirements
 
-This is designed to be used with apps that support both iOS 7 and iOS 8. Versions prior to 0.3.0 should not be used.
+This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please use the latest commit (preferred) or latest version. It is back supported to iOS 4.3 but the class uses arc and currently doesn not support pre-arc apps.
 
 ## Installation
 
 DeceptionAlertViews is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
-
-    pod "DeceptionAlertViews"
+    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => '7a75bfdce57004e9240cccd6ba5b7f5aca52e187' (or latest commit number)
 
 ## Author
 

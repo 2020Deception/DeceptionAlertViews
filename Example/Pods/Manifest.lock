@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DeceptionAlertViews: 1a44b29099bf87d46c0d8440de42b8790707b717
+  DeceptionAlertViews: 9768833c8c704f21f679c70ce56e6c1f4cf89696
 
 COCOAPODS: 0.35.0
