@@ -27,8 +27,8 @@ static NSString * const kEmptyString = @"";
             void (^cancelBlock)() = self.cancelBlock;
             cancelBlock();
         }
-    } else if (self.completionBlocks[buttonIndex]) {
-        void (^completionBlock)() = self.completionBlocks[buttonIndex];
+    } else if (self.completionBlocks[buttonIndex-1]) {
+        void (^completionBlock)() = self.completionBlocks[buttonIndex-1];
         completionBlock();
     }
 }
