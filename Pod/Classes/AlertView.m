@@ -34,7 +34,15 @@ static NSString * const kEmptyString = @"";
 }
 
 #pragma mark - alert view
-
+/*!
+ * creates UIAlertView
+ @param title
+ @param message
+ @param alertCancelBlock the block called if the cancel button is pressed
+ @param completionBlocks - array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
+ @param cancelButtonTitle the cancel button title as an NSString
+ @param otherButtonTitles the array of titles as NSStrings for the other button titles
+ */
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
                  ccancelBlock:(AlertCancelBlock)alertCancelBlock
@@ -59,8 +67,8 @@ static NSString * const kEmptyString = @"";
  @param message
  @param alertCancelBlock the block called if the cancel button is pressed
  @param completionBlocks - array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
- @param cancelButtonTitle
- @param otherButtonTitles
+ @param cancelButtonTitle the cancel button title as an NSString
+ @param otherButtonTitles the array of titles as NSStrings for the other button titles
  */
 + (UIAlertController *)createAlertControllerWithTitle:(NSString *)title
                                               message:(NSString *)message
@@ -70,12 +78,8 @@ static NSString * const kEmptyString = @"";
                                     otherButtonTitles:(NSArray *)otherButtonTitles {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel handler:alertCancelBlock]];
-    if (completionBlocks.count > 0) {
-        int i = 0;
-        for (NSString *buttonTitle in otherButtonTitles) {
-            [alert addAction:[UIAlertAction actionWithTitle:buttonTitle style:UIAlertActionStyleDefault handler:completionBlocks[i]]];
-            i += 1;
-        }
+    for (int i = 0; i < completionBlocks.count; i++) {
+        [alert addAction:[UIAlertAction actionWithTitle:otherButtonTitles[i] style:UIAlertActionStyleDefault handler:completionBlocks[i]]];
     }
     return alert;
 }
