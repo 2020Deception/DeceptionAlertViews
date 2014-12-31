@@ -7,6 +7,7 @@
 
 ## Usage
 
+Provide the following line in any classes that will be presenting a type of alertview -> #import "AlertView.h".
 The method you will use for showing your alertviews will be :
 + (void)returnAlertWithTitle:(NSString *)title
                 message:(NSString *)message
