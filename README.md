@@ -8,29 +8,36 @@
 ## Usage
 
 Provide the following line in any classes that will be presenting a type of alertview -> #import "AlertView.h".
-The method you will use for showing your alertviews will be :
+The method you will use for showing your alertviews will be :  
+
+'''Objective-C
 + (void)returnAlertWithTitle:(NSString *)title  
-                message:(NSString *)message  
-             cancelBlock:(AlertCancelBlock)alertCancelBlock  
-         completionBlocks:(NSArray *)completionBlocks  
-         cancelButtonTitle:(NSString *)cancelButtonTitle  
-         otherButtonTitles:(NSArray *)otherButtonTitles  
-   presentingViewController:(UIViewController *)presentingViewController  
-               animated:(BOOL)animated  
-          completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
+message:(NSString *)message  
+cancelBlock:(AlertCancelBlock)alertCancelBlock  
+completionBlocks:(NSArray *)completionBlocks  
+cancelButtonTitle:(NSString *)cancelButtonTitle  
+otherButtonTitles:(NSArray *)otherButtonTitles  
+presentingViewController:(UIViewController *)presentingViewController  
+animated:(BOOL)animated  
+completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
+'''  
+  
 Note : the alertCancelBlock is an actual block or ^{} that you will provide as the parameter and completionBlocks is an array of blocks you will pass in with the index corresponding the index of the button in the otherButtonTitles array.  
 An example implementation :  
-    [AlertView returnAlertWithTitle:@"A Title" message:@"A Message" cancelBlock:^{  
-        NSLog(@"cancel block called");  
-    } completionBlocks:@[^{  
-        NSLog(@"block one called"); 
-    },^{  
-        NSLog(@"block two called");  
-    },^{  
-        NSLog(@"block three called");  
-    }] cancelButtonTitle:@"cancel" otherButtonTitles:@[@"one", @"two", @"three"] presentingViewController:self animated:YES completionBlock:^{  
-        NSLog(@"completion block called");  
-    }];  
+
+'''Objective-C
+[AlertView returnAlertWithTitle:@"A Title" message:@"A Message" cancelBlock:^{  
+NSLog(@"cancel block called");  
+} completionBlocks:@[^{  
+NSLog(@"block one called"); 
+},^{  
+NSLog(@"block two called");  
+},^{  
+NSLog(@"block three called");  
+}] cancelButtonTitle:@"cancel" otherButtonTitles:@[@"one", @"two", @"three"] presentingViewController:self animated:YES completionBlock:^{  
+NSLog(@"completion block called");  
+}];  
+'''  
 
 ## Requirements
 
@@ -39,7 +46,7 @@ This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please us
 ## Installation
 
 DeceptionAlertViews is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:  
-    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => '7a75bfdce57004e9240cccd6ba5b7f5aca52e187' (or latest commit number)
+    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => 'd6a8cd5019fa1c051c912e2e8a81ac67c0695838' (or latest commit number)
 
 ## Author
 
