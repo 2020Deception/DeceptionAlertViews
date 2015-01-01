@@ -13,7 +13,21 @@ Provide the following line in any classes that will be presenting a type of aler
 #import <DeceptionAlertViews/AlertView.h>
 ```  
 
-The method you will use for showing your alertviews will be :  
+The method you will use for showing a UIAlertView/UIAlertController will be :  
+  
+```Objective-C
++ (void)showAlertWithTitle:(NSString *)title  
+                message:(NSString *)message  
+            cancelBlock:(AlertCancelBlock)alertCancelBlock  
+        completionBlocks:(NSArray *)completionBlocks  
+        cancelButtonTitle:(NSString *)cancelButtonTitle  
+        otherButtonTitles:(NSArray *)otherButtonTitles  
+    presentingViewController:(UIViewController *)presentingViewController  
+            animated:(BOOL)animated  
+        completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
+```
+  
+To return an UIAlertView/UIAlertController use the following :  
   
 ```Objective-C
 + (void)returnAlertWithTitle:(NSString *)title  
@@ -51,7 +65,7 @@ This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please us
 ## Installation
 
 DeceptionAlertViews is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:  
-    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => 'b83e1bca0f5d361141237973116101efc29a0d2c' (or latest commit number)
+    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => '6cd4ff4ac161a7dfc4d7a04146c0327d0f96a545' (or latest commit number)
 
 ## Author
 
