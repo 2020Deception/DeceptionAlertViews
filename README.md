@@ -7,19 +7,24 @@
 
 ## Usage
 
-Provide the following line in any classes that will be presenting a type of alertview -> #import <DeceptionAlertViews/AlertView.h>.  
+Provide the following line in any classes that will be presenting a type of alertview ->  
+
+```Objective-C
+#import <DeceptionAlertViews/AlertView.h>
+```  
+
 The method you will use for showing your alertviews will be :  
   
 ```Objective-C
 + (void)returnAlertWithTitle:(NSString *)title  
-message:(NSString *)message  
-cancelBlock:(AlertCancelBlock)alertCancelBlock  
-completionBlocks:(NSArray *)completionBlocks  
-cancelButtonTitle:(NSString *)cancelButtonTitle  
-otherButtonTitles:(NSArray *)otherButtonTitles  
-presentingViewController:(UIViewController *)presentingViewController  
-animated:(BOOL)animated  
-completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
+                message:(NSString *)message  
+            cancelBlock:(AlertCancelBlock)alertCancelBlock  
+        completionBlocks:(NSArray *)completionBlocks  
+        cancelButtonTitle:(NSString *)cancelButtonTitle  
+        otherButtonTitles:(NSArray *)otherButtonTitles  
+    presentingViewController:(UIViewController *)presentingViewController  
+            animated:(BOOL)animated  
+        completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
 ```
   
 Note : the alertCancelBlock is an actual block or ^{} that you will provide as the parameter and completionBlocks is an array of blocks you will pass in with the index corresponding the index of the button in the otherButtonTitles array.  
@@ -27,15 +32,15 @@ An example implementation :
 
 ```Objective-C
 [AlertView returnAlertWithTitle:@"A Title" message:@"A Message" cancelBlock:^{  
-NSLog(@"cancel block called");  
+    NSLog(@"cancel block called");  
 } completionBlocks:@[^{  
-NSLog(@"block one called"); 
+    NSLog(@"block one called"); 
 },^{  
-NSLog(@"block two called");  
+    NSLog(@"block two called");  
 },^{  
-NSLog(@"block three called");  
+    NSLog(@"block three called");  
 }] cancelButtonTitle:@"cancel" otherButtonTitles:@[@"one", @"two", @"three"] presentingViewController:self animated:YES completionBlock:^{  
-NSLog(@"completion block called");  
+    NSLog(@"completion block called");  
 }];  
 ```
   
