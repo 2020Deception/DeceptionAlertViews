@@ -39,13 +39,13 @@ static NSString * const kEmptyString = @"";
  @param title
  @param message
  @param alertCancelBlock the block called if the cancel button is pressed
- @param completionBlocks - array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
+ @param completionBlocks the array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
  @param cancelButtonTitle the cancel button title as an NSString
  @param otherButtonTitles the array of titles as NSStrings for the other button titles
  */
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
-                 ccancelBlock:(AlertCancelBlock)alertCancelBlock
+                  cancelBlock:(AlertCancelBlock)alertCancelBlock
              completionBlocks:(NSArray *)completionBlocks
             cancelButtonTitle:(NSString *)cancelButtonTitle
             otherButtonTitles:(NSArray *)otherButtonTitles {
@@ -53,10 +53,10 @@ static NSString * const kEmptyString = @"";
         self.delegate = self;
         self.cancelBlock = alertCancelBlock;
         self.completionBlocks = completionBlocks;
-        for(NSString *otherButtonTitle in otherButtonTitles)
-            [self addButtonWithTitle:otherButtonTitle];
+        [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [self addButtonWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""];
+        }];
     }
-    
     return self;
 }
 
@@ -66,21 +66,25 @@ static NSString * const kEmptyString = @"";
  @param title
  @param message
  @param alertCancelBlock the block called if the cancel button is pressed
- @param completionBlocks - array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
+ @param completionBlocks the array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
  @param cancelButtonTitle the cancel button title as an NSString
  @param otherButtonTitles the array of titles as NSStrings for the other button titles
  */
 + (UIAlertController *)createAlertControllerWithTitle:(NSString *)title
                                               message:(NSString *)message
-                                         ccancelBlock:(AlertCancelBlock)alertCancelBlock
+                                          cancelBlock:(AlertCancelBlock)alertCancelBlock
                                      completionBlocks:(NSArray *)completionBlocks
                                     cancelButtonTitle:(NSString *)cancelButtonTitle
                                     otherButtonTitles:(NSArray *)otherButtonTitles {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel handler:alertCancelBlock]];
-    for (int i = 0; i < completionBlocks.count; i++) {
-        [alert addAction:[UIAlertAction actionWithTitle:otherButtonTitles[i] style:UIAlertActionStyleDefault handler:completionBlocks[i]]];
-    }
+    [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle
+                                              style:UIAlertActionStyleCancel
+                                            handler:alertCancelBlock]];
+    [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [alert addAction:[UIAlertAction actionWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""
+                                                  style:UIAlertActionStyleDefault
+                                                handler:completionBlocks[idx]]];
+    }];
     return alert;
 }
 
@@ -95,12 +99,37 @@ static NSString * const kEmptyString = @"";
     presentingViewController:(UIViewController *)presentingViewController
                     animated:(BOOL)animated
              completionBlock:(AlertCompletionBlock)alertCompletionBlock {
-    if (NSClassFromString(@"UIAlertController"))
-        [presentingViewController presentViewController:[AlertView createAlertControllerWithTitle:title ? : kEmptyString message:message ? : kEmptyString ccancelBlock:alertCancelBlock completionBlocks:completionBlocks cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles] animated:animated completion:alertCompletionBlock];
-    else
-        [[[AlertView alloc]initWithTitle:title ? : kEmptyString message:message ? : kEmptyString ccancelBlock:alertCancelBlock completionBlocks:completionBlocks cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles] show];
-    
+#ifdef DEBUG
+    for (NSString *title in otherButtonTitles)
+        if (title.length == 0)
+            NSLog(@"WARNING : there needs to be a title for every button.");
+    if (cancelButtonTitle.length == 0)
+        NSLog(@"WARNING : there needs to be a title for the cancel button.");
+    if (completionBlocks.count != otherButtonTitles.count)
+        NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
+#endif
+    if (NSClassFromString(@"UIAlertController")) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [presentingViewController presentViewController:
+             [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
+                                               message:message.length > 0 ? message : kEmptyString
+                                           cancelBlock:alertCancelBlock
+                                      completionBlocks:completionBlocks
+                                     cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                                     otherButtonTitles:otherButtonTitles]
+                                                   animated:animated completion:alertCompletionBlock];
+        });
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
+                                     message:message.length > 0 ? message : kEmptyString
+                                 cancelBlock:alertCancelBlock
+                            completionBlocks:completionBlocks
+                           cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                           otherButtonTitles:otherButtonTitles]
+             show];
+        });
+    }
 }
-
 
 @end
