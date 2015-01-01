@@ -10,7 +10,7 @@
 Provide the following line in any classes that will be presenting a type of alertview -> #import "AlertView.h".
 The method you will use for showing your alertviews will be :  
 
-'''Objective-C
+'''
 + (void)returnAlertWithTitle:(NSString *)title  
 message:(NSString *)message  
 cancelBlock:(AlertCancelBlock)alertCancelBlock  
@@ -25,7 +25,7 @@ completionBlock:(AlertCompletionBlock)alertCompletionBlock;
 Note : the alertCancelBlock is an actual block or ^{} that you will provide as the parameter and completionBlocks is an array of blocks you will pass in with the index corresponding the index of the button in the otherButtonTitles array.  
 An example implementation :  
 
-'''Objective-C
+'''
 [AlertView returnAlertWithTitle:@"A Title" message:@"A Message" cancelBlock:^{  
 NSLog(@"cancel block called");  
 } completionBlocks:@[^{  
@@ -46,7 +46,7 @@ This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please us
 ## Installation
 
 DeceptionAlertViews is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:  
-    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => 'd6a8cd5019fa1c051c912e2e8a81ac67c0695838' (or latest commit number)
+    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => '62839704b587521eefb2a6dcc032852348ea751e' (or latest commit number)
 
 ## Author
 

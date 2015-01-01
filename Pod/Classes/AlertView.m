@@ -51,8 +51,8 @@ static NSString * const kEmptyString = @"";
             otherButtonTitles:(NSArray *)otherButtonTitles {
     if ((self = [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil])) {
         self.delegate = self;
-        self.cancelBlock = alertCancelBlock;
-        self.completionBlocks = completionBlocks;
+        self.cancelBlock = alertCancelBlock ? : ^{};
+        self.completionBlocks = completionBlocks ? : @[];
         [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             [self addButtonWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""];
         }];
@@ -90,7 +90,7 @@ static NSString * const kEmptyString = @"";
 
 #pragma mark - meat and potatoes
 
-+ (void)returnAlertWithTitle:(NSString *)title
++ (void)showAlertWithTitle:(NSString *)title
                      message:(NSString *)message
                  cancelBlock:(AlertCancelBlock)alertCancelBlock
             completionBlocks:(NSArray *)completionBlocks
@@ -130,6 +130,40 @@ static NSString * const kEmptyString = @"";
              show];
         });
     }
+}
+
++ (id)returnAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
+               cancelBlock:(AlertCancelBlock)alertCancelBlock
+          completionBlocks:(NSArray *)completionBlocks
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+         otherButtonTitles:(NSArray *)otherButtonTitles
+  presentingViewController:(UIViewController *)presentingViewController
+                  animated:(BOOL)animated
+           completionBlock:(AlertCompletionBlock)alertCompletionBlock {
+#ifdef DEBUG
+    for (NSString *title in otherButtonTitles)
+        if (title.length == 0)
+            NSLog(@"WARNING : there needs to be a title for every button.");
+    if (cancelButtonTitle.length == 0)
+        NSLog(@"WARNING : there needs to be a title for the cancel button.");
+    if (completionBlocks.count != otherButtonTitles.count)
+        NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
+#endif
+    if (NSClassFromString(@"UIAlertController"))
+        return [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
+                                          message:message.length > 0 ? message : kEmptyString
+                                       cancelBlock:alertCancelBlock
+                                  completionBlocks:completionBlocks
+                                 cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                                 otherButtonTitles:otherButtonTitles];
+    else
+        return [[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
+                                 message:message.length > 0 ? message : kEmptyString
+                             cancelBlock:alertCancelBlock
+                        completionBlocks:completionBlocks
+                       cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                       otherButtonTitles:otherButtonTitles];
 }
 
 @end

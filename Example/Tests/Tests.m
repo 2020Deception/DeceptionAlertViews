@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Anonymous. All rights reserved.
 //
 
-//${TEST_EXAMPLE}
-#import <UIKit/UIKit.h>
+#import <DeceptionAlertViews/AlertView.h>
 #import <XCTest/XCTest.h>
 
 @interface DeceptionAlertViewTests : XCTestCase
@@ -18,16 +17,71 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testATest {
-    XCTAssert([@"" isEqualToString:@""], @"");
+- (void)testProperAlert {
+    if ([UIDevice currentDevice].systemVersion.integerValue>=8.0)
+        XCTAssertTrue([[AlertView returnAlertWithTitle:nil
+                                          message:nil
+                                      cancelBlock:nil
+                                 completionBlocks:nil
+                                cancelButtonTitle:nil
+                                otherButtonTitles:nil
+                         presentingViewController:nil
+                                         animated:YES
+                                   completionBlock:nil] isKindOfClass:[UIAlertController class]]);
+    else
+        XCTAssertTrue([[AlertView returnAlertWithTitle:nil
+                                           message:nil
+                                       cancelBlock:nil
+                                  completionBlocks:nil
+                                 cancelButtonTitle:nil
+                                 otherButtonTitles:nil
+                          presentingViewController:nil
+                                          animated:YES
+                                   completionBlock:nil] isKindOfClass:[UIAlertView class]]);
+}
+
+- (void)testTypicalData {
+    @try {
+        [AlertView returnAlertWithTitle:@"title"
+                                message:@"message"
+                            cancelBlock:nil
+                       completionBlocks:@[^{
+            NSLog(@"test block one hit");
+        }, ^{
+            NSLog(@"test block two hit");
+        }]
+                      cancelButtonTitle:@"cancel"
+                      otherButtonTitles:@[@"one", @"two"]
+               presentingViewController:[[UIViewController alloc]init]
+                               animated:YES
+                        completionBlock:nil];
+    }
+    @catch (NSException *exception) {
+        XCTAssertNil(exception, @"there is an exception in the base case");
+    }
+}
+
+- (void)testEmptyData {
+    @try {
+        [AlertView returnAlertWithTitle:nil
+                                message:nil
+                            cancelBlock:nil
+                       completionBlocks:nil
+                      cancelButtonTitle:nil
+                      otherButtonTitles:nil
+               presentingViewController:nil
+                               animated:YES
+                        completionBlock:nil];
+    }
+    @catch (NSException *exception) {
+        XCTAssertNil(exception, @"there is an exception in the base case");
+    }
 }
 
 @end
