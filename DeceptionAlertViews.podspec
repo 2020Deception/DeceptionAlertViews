@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = 'DeceptionAlertViews'
 s.version          = '0.5.0'
-s.summary          = 'This streamlined class gives an appropriate UIAlertView or UIAlertController depending on what version iOS is being used. See README.md and class documentation for instructions on how to use the appropriate methods.'
+s.summary          = 'This class gives an appropriate UIAlertView or UIAlertController depending on what version iOS is being used.'
 s.homepage         = 'https://github.com/2020Deception/DeceptionAlertViews'
 s.license          = 'MIT'
 s.authors          = { 'Anonymous' => '2020deception@gmail.com' }

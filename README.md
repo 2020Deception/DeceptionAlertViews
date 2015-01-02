@@ -60,7 +60,7 @@ An example implementation :
   
 ## Requirements
 
-This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please use the latest commit (preferred) or latest version. It is back supported to iOS 4.3 but the class uses arc and currently doesn not support pre-arc apps.
+This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please use the latest commit (preferred) or latest version. It is back supported to iOS 4.3 but the class uses arc and currently does not support non-arc apps.
 
 ## Installation
 
