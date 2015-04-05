@@ -22,7 +22,8 @@ The method you will use for showing a UIAlertView/UIAlertController will be :
         completionBlocks:(NSArray *)completionBlocks  
         cancelButtonTitle:(NSString *)cancelButtonTitle  
         otherButtonTitles:(NSArray *)otherButtonTitles  
-    presentingViewController:(UIViewController *)presentingViewController  
+    presentingViewController:(UIViewController *)presentingViewController
+                type:(UIAlertControllerStyle)type
             animated:(BOOL)animated  
         completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
 ```
@@ -37,6 +38,7 @@ To return an UIAlertView/UIAlertController use the following :
         cancelButtonTitle:(NSString *)cancelButtonTitle  
         otherButtonTitles:(NSArray *)otherButtonTitles  
     presentingViewController:(UIViewController *)presentingViewController  
+                type:(UIAlertControllerStyle)type
             animated:(BOOL)animated  
         completionBlock:(AlertCompletionBlock)alertCompletionBlock;  
 ```

@@ -21,6 +21,7 @@ typedef void (^AlertCompletionBlock)();
  @param cancelButtonTitle cancel button title
  @param otherButtonTitles other button titles
  @param presentingViewController the presenting view controller
+ @param type the type of alert
  @param animated determines if the presentation should be animated for UIAlertController <- does nothing for UIAlertView currently
  @param alertCompletionBlock completion handler once UIAlertController is dismissed <- does nothing for UIAlertView currently
  */
@@ -43,6 +44,7 @@ typedef void (^AlertCompletionBlock)();
  @param cancelButtonTitle cancel button title
  @param otherButtonTitles other button titles
  @param presentingViewController the presenting view controller
+ @param type the type of alert
  @param animated determines if the presentation should be animated for UIAlertController <- does nothing for UIAlertView currently
  @param alertCompletionBlock completion handler once UIAlertController is dismissed <- does nothing for UIAlertView currently
  */
