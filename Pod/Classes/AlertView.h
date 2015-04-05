@@ -25,13 +25,14 @@ typedef void (^AlertCompletionBlock)();
  @param alertCompletionBlock completion handler once UIAlertController is dismissed <- does nothing for UIAlertView currently
  */
 + (void)showAlertWithTitle:(NSString *)title
-                     message:(NSString *)message
-                 cancelBlock:(AlertCancelBlock)alertCancelBlock
-            completionBlocks:(NSArray *)completionBlocks
-           cancelButtonTitle:(NSString *)cancelButtonTitle
-           otherButtonTitles:(NSArray *)otherButtonTitles
-    presentingViewController:(UIViewController *)presentingViewController
-                    animated:(BOOL)animated
+                   message:(NSString *)message
+               cancelBlock:(AlertCancelBlock)alertCancelBlock
+          completionBlocks:(NSArray *)completionBlocks
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+         otherButtonTitles:(NSArray *)otherButtonTitles
+  presentingViewController:(UIViewController *)presentingViewController
+                      type:(UIAlertControllerStyle)type
+                  animated:(BOOL)animated
            completionBlock:(AlertCompletionBlock)alertCompletionBlock;
 /*!
  * returns a UIAlertController or UIAlertView based on OS version in the alertReturnBlock
@@ -52,6 +53,7 @@ typedef void (^AlertCompletionBlock)();
          cancelButtonTitle:(NSString *)cancelButtonTitle
          otherButtonTitles:(NSArray *)otherButtonTitles
   presentingViewController:(UIViewController *)presentingViewController
+                      type:(UIAlertControllerStyle)type
                   animated:(BOOL)animated
            completionBlock:(AlertCompletionBlock)alertCompletionBlock;
 
