@@ -77,7 +77,7 @@ static NSString * const kEmptyString = @"";
                                     cancelButtonTitle:(NSString *)cancelButtonTitle
                                     otherButtonTitles:(NSArray *)otherButtonTitles
                                                  type:(UIAlertControllerStyle)type {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:type];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle
                                               style:UIAlertActionStyleCancel
                                             handler:alertCancelBlock]];
@@ -143,7 +143,6 @@ static NSString * const kEmptyString = @"";
     if (completionBlocks.count != otherButtonTitles.count)
         NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
 #endif
-    dispatch_async(dispatch_get_main_queue(), ^{
         id alert = [AlertView returnAlertWithTitle:title.length > 0 ? title : kEmptyString
                                            message:message.length > 0 ? message : kEmptyString
                                        cancelBlock:alertCancelBlock
@@ -154,7 +153,7 @@ static NSString * const kEmptyString = @"";
                                               type:(UIAlertControllerStyle)type
                                           animated:animated
                                    completionBlock:alertCompletionBlock];
-        
+    dispatch_async(dispatch_get_main_queue(), ^{
         (NSClassFromString(@"UIAlertController")) ?
         [presentingViewController presentViewController:(UIAlertController *)alert animated:animated completion:alertCompletionBlock] :
         [(UIAlertView *)alert show];
