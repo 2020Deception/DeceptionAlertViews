@@ -93,6 +93,39 @@ static NSString * const kEmptyString = @"";
 
 + (void)showAlertWithTitle:(NSString *)title
                    message:(NSString *)message
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+  presentingViewController:(UIViewController *)presentingViewController
+                  animated:(BOOL)animated {
+    [AlertView showAlertWithTitle:title
+                          message:message
+                      cancelBlock:nil
+                cancelButtonTitle:cancelButtonTitle
+         presentingViewController:presentingViewController
+                         animated:animated
+                  completionBlock:nil];
+}
+
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
+               cancelBlock:(AlertCancelBlock)alertCancelBlock
+         cancelButtonTitle:(NSString *)cancelButtonTitle
+  presentingViewController:(UIViewController *)presentingViewController
+                  animated:(BOOL)animated
+           completionBlock:(AlertCompletionBlock)alertCompletionBlock {
+    [AlertView showAlertWithTitle:title
+                          message:message
+                      cancelBlock:alertCancelBlock
+                 completionBlocks:nil
+                cancelButtonTitle:cancelButtonTitle
+                otherButtonTitles:nil
+         presentingViewController:presentingViewController
+                             type:UIAlertControllerStyleAlert
+                         animated:animated
+                  completionBlock:alertCompletionBlock];
+}
+
++ (void)showAlertWithTitle:(NSString *)title
+                   message:(NSString *)message
                cancelBlock:(AlertCancelBlock)alertCancelBlock
           completionBlocks:(NSArray *)completionBlocks
          cancelButtonTitle:(NSString *)cancelButtonTitle
@@ -110,29 +143,22 @@ static NSString * const kEmptyString = @"";
     if (completionBlocks.count != otherButtonTitles.count)
         NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
 #endif
-    if (NSClassFromString(@"UIAlertController")) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [presentingViewController presentViewController:
-             [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
-                                               message:message.length > 0 ? message : kEmptyString
-                                           cancelBlock:alertCancelBlock
-                                      completionBlocks:completionBlocks
-                                     cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
-                                     otherButtonTitles:otherButtonTitles
-                                                  type:(UIAlertControllerStyle)type]
-                                                   animated:animated completion:alertCompletionBlock];
-        });
-    } else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
-                                     message:message.length > 0 ? message : kEmptyString
-                                 cancelBlock:alertCancelBlock
-                            completionBlocks:completionBlocks
-                           cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
-                           otherButtonTitles:otherButtonTitles]
-             show];
-        });
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        id alert = [AlertView returnAlertWithTitle:title.length > 0 ? title : kEmptyString
+                                           message:message.length > 0 ? message : kEmptyString
+                                       cancelBlock:alertCancelBlock
+                                  completionBlocks:completionBlocks
+                                 cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                                 otherButtonTitles:otherButtonTitles
+                          presentingViewController:presentingViewController
+                                              type:(UIAlertControllerStyle)type
+                                          animated:animated
+                                   completionBlock:alertCompletionBlock];
+        
+        (NSClassFromString(@"UIAlertController")) ?
+        [presentingViewController presentViewController:(UIAlertController *)alert animated:animated completion:alertCompletionBlock] :
+        [(UIAlertView *)alert show];
+    });
 }
 
 + (id)returnAlertWithTitle:(NSString *)title
@@ -154,21 +180,21 @@ static NSString * const kEmptyString = @"";
     if (completionBlocks.count != otherButtonTitles.count)
         NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
 #endif
-    if (NSClassFromString(@"UIAlertController"))
-        return [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
-                                                 message:message.length > 0 ? message : kEmptyString
-                                             cancelBlock:alertCancelBlock
-                                        completionBlocks:completionBlocks
-                                       cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
-                                       otherButtonTitles:otherButtonTitles
-                                                    type:(UIAlertControllerStyle)type];
-    else
-        return [[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
-                                       message:message.length > 0 ? message : kEmptyString
-                                   cancelBlock:alertCancelBlock
-                              completionBlocks:completionBlocks
-                             cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
-                             otherButtonTitles:otherButtonTitles];
+    return (NSClassFromString(@"UIAlertController")) ?
+    [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
+                                      message:message.length > 0 ? message : kEmptyString
+                                  cancelBlock:alertCancelBlock
+                             completionBlocks:completionBlocks
+                            cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                            otherButtonTitles:otherButtonTitles
+                                         type:(UIAlertControllerStyle)type] :
+    
+    [[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
+                            message:message.length > 0 ? message : kEmptyString
+                        cancelBlock:alertCancelBlock
+                   completionBlocks:completionBlocks
+                  cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                  otherButtonTitles:otherButtonTitles];
 }
 
 @end
