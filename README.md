@@ -67,7 +67,7 @@ This is designed to be used with apps that support iOS 4.3 thru iOS 8. Please us
 ## Installation
 
 DeceptionAlertViews is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:  
-    pod 'DeceptionAlertViews', :git => 'https://github.com/2020Deception/DeceptionAlertViews.git', :commit => '6cd4ff4ac161a7dfc4d7a04146c0327d0f96a545' (or latest commit number)
+pod 'DeceptionAlertViews', '~> 0.6.0'
 
 ## Author
 
