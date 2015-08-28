@@ -91,6 +91,31 @@ static NSString * const kEmptyString = @"";
 
 #pragma mark - meat and potatoes
 
++ (void)showAlertWithMessage:(NSString *)message
+           cancelButtonTitle:(NSString *)cancelButtonTitle
+    presentingViewController:(UIViewController *)presentingViewController {
+    [AlertView showAlertWithTitle:nil
+                          message:message
+                      cancelBlock:nil
+                cancelButtonTitle:cancelButtonTitle
+         presentingViewController:presentingViewController
+                         animated:YES
+                  completionBlock:nil];
+}
+
++ (void)showAlertWithMessage:(NSString *)message
+           cancelButtonTitle:(NSString *)cancelButtonTitle
+    presentingViewController:(UIViewController *)presentingViewController
+                    animated:(BOOL)animated {
+    [AlertView showAlertWithTitle:nil
+                          message:message
+                      cancelBlock:nil
+                cancelButtonTitle:cancelButtonTitle
+         presentingViewController:presentingViewController
+                         animated:animated
+                  completionBlock:nil];
+}
+
 + (void)showAlertWithTitle:(NSString *)title
                    message:(NSString *)message
          cancelButtonTitle:(NSString *)cancelButtonTitle

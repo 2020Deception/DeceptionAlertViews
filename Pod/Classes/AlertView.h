@@ -14,6 +14,21 @@ typedef void (^AlertCompletionBlock)();
 @interface AlertView : UIAlertView
 
 /*!
+ * shows a basic AlertView style controller with one button (animated = YES)
+ */
++ (void)showAlertWithMessage:(NSString *)message
+           cancelButtonTitle:(NSString *)cancelButtonTitle
+    presentingViewController:(UIViewController *)presentingViewController;
+
+/*!
+ * shows a basic AlertView style controller with one button
+ */
++ (void)showAlertWithMessage:(NSString *)message
+           cancelButtonTitle:(NSString *)cancelButtonTitle
+    presentingViewController:(UIViewController *)presentingViewController
+                    animated:(BOOL)animated;
+
+/*!
  * shows a basic AlertView style controller with one button
  */
 + (void)showAlertWithTitle:(NSString *)title
