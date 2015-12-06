@@ -53,8 +53,10 @@ static NSString * const kEmptyString = @"";
         self.delegate = self;
         self.cancelBlock = alertCancelBlock ? : ^{};
         self.completionBlocks = completionBlocks ? : @[];
+        __unsafe_unretained typeof(self) weakSelf = self;
         [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            [self addButtonWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""];
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf addButtonWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""];
         }];
     }
     return self;
