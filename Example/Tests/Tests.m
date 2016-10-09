@@ -26,14 +26,15 @@
 - (void)testProperAlert {
     if ([UIDevice currentDevice].systemVersion.integerValue>=8.0)
         XCTAssertTrue([[AlertView returnAlertWithTitle:nil
-                                          message:nil
-                                      cancelBlock:nil
-                                 completionBlocks:nil
-                                cancelButtonTitle:nil
-                                otherButtonTitles:nil
-                         presentingViewController:nil
-                                         animated:YES
-                                   completionBlock:nil] isKindOfClass:[UIAlertController class]]);
+                                               message:nil
+                                           cancelBlock:nil
+                                      completionBlocks:nil
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:nil
+                              presentingViewController:[[UIViewController alloc] init]
+                                                  type:UIAlertControllerStyleAlert
+                                              animated:YES
+                                       completionBlock:nil] isKindOfClass:[UIAlertController class]]);
     else
         XCTAssertTrue([[AlertView returnAlertWithTitle:nil
                                            message:nil
@@ -41,7 +42,8 @@
                                   completionBlocks:nil
                                  cancelButtonTitle:nil
                                  otherButtonTitles:nil
-                          presentingViewController:nil
+                              presentingViewController:[[UIViewController alloc] init]
+                                                  type:UIAlertControllerStyleAlert
                                           animated:YES
                                    completionBlock:nil] isKindOfClass:[UIAlertView class]]);
 }
@@ -59,6 +61,7 @@
                       cancelButtonTitle:@"cancel"
                       otherButtonTitles:@[@"one", @"two"]
                presentingViewController:[[UIViewController alloc]init]
+                                   type:UIAlertControllerStyleAlert
                                animated:YES
                         completionBlock:nil];
     }
@@ -75,7 +78,8 @@
                        completionBlocks:nil
                       cancelButtonTitle:nil
                       otherButtonTitles:nil
-               presentingViewController:nil
+               presentingViewController:[[UIViewController alloc] init]
+                                   type:UIAlertControllerStyleAlert
                                animated:YES
                         completionBlock:nil];
     }
