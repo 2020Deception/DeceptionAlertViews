@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "Availability.h"
 
 typedef void (^AlertCancelBlock)();
 typedef void (^AlertCompletionBlock)();
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AlertView : UIAlertView
+@interface AlertView : UIAlertController
 
 /*!
  * shows a basic AlertView style controller with one button (animated = YES)

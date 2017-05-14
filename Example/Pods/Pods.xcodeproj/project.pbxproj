@@ -1,995 +1,476 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>013C9A9C9ECD4F5E6385282F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0CE6DC128768DD9EA42B101C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>01F5ABED2DF047F0EB50CADB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-DeceptionAlertViews-DeceptionAlertViews.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>03033C42F1715653815FDA78</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>28943371C6909B5A06E51E13</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>4.3</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>0AB046DF651ECAF75B30320D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B72361CFBCE117412D01D30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EC1BAA14475926A8AAEC93F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0CE6DC128768DD9EA42B101C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>121A472A4DFA161E8148D13F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A976F7ADA8FBD60B4E0F4473</string>
-				<string>AFB5D77030E1B2E085FF3F5F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>163BC9A721BBA0A92D992984</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95CF517D772A3200756503FE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1F3F335C6B97F1DA36BFBC2D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20CA2A156F16A711A6471D42</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>22A874C2DF42FD60984F0C0B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>ECC8D9753C535AC1987536B0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>250C2D6FABC2C6E183EF159F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0CE6DC128768DD9EA42B101C</string>
-				<string>8AE2D7974DC61DA3905A878F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>28943371C6909B5A06E51E13</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2EE24270812849EBE5A89C17</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>28943371C6909B5A06E51E13</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>4.3</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3A592B75556F470F6D8130FF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>013C9A9C9ECD4F5E6385282F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3EC151D520BCCDF3AD0CD132</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>D2329B2CE1CAE15DAACA91EB</string>
-				<string>A8E079D5FBC2F4C8694D6837</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3F1C317574622A4AF3F9CE3F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43F7D5F8F15B7668D0E75011</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>121A472A4DFA161E8148D13F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0B72361CFBCE117412D01D30</string>
-				<string>3A592B75556F470F6D8130FF</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>CA574FA33E47FE0BA37B96DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-DeceptionAlertViews</string>
-			<key>productName</key>
-			<string>Pods-DeceptionAlertViews</string>
-			<key>productReference</key>
-			<string>D91E28BB8B8C62C9B7C6009E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>4A06CA3AFCEB2D24B3EB458D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>163BC9A721BBA0A92D992984</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4EF4765E71DC2064C4CC9E12</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>53C8CF3920C1D2D0FCF0CC65</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F1C317574622A4AF3F9CE3F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>53D6DC09CCD075C9C83517A6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>55D8CD27D42E1A69613DF78C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>250C2D6FABC2C6E183EF159F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6AD07BD20C63D7DD17097AE2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2EE24270812849EBE5A89C17</string>
-				<string>03033C42F1715653815FDA78</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6FF6E656FD1F33E86EBD17C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0CE6DC128768DD9EA42B101C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>72B58BF4A47077355CAEDF66</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>748CD98DFBC8C73225050E6C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>53D6DC09CCD075C9C83517A6</string>
-				<string>9AADB77070AB28D3FC1D0139</string>
-				<string>55D8CD27D42E1A69613DF78C</string>
-				<string>F48EE4A81F139310223E47D3</string>
-				<string>22A874C2DF42FD60984F0C0B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8527B8271E54DD1DD8BE1D8A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8581AF61037A11DFC2F04FEB</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>6AD07BD20C63D7DD17097AE2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D749826A0E822E4677EA19F0</string>
-				<string>9BE1481890238D9754C3E1B7</string>
-				<string>4A06CA3AFCEB2D24B3EB458D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews</string>
-			<key>productName</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews</string>
-			<key>productReference</key>
-			<string>01F5ABED2DF047F0EB50CADB</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>8AE2D7974DC61DA3905A878F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>95CF517D772A3200756503FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AlertView.h</string>
-			<key>path</key>
-			<string>Pod/Classes/AlertView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9AADB77070AB28D3FC1D0139</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FEAF013DFCE714FBB4FBE790</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9BE1481890238D9754C3E1B7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6FF6E656FD1F33E86EBD17C0</string>
-				<string>AE1FD29DFF98544E1B910A30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A56AB582AF2FD5497B5B074F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>AlertView.m</string>
-			<key>path</key>
-			<string>Pod/Classes/AlertView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A8E079D5FBC2F4C8694D6837</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>4.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A976F7ADA8FBD60B4E0F4473</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CB0314AAC5E7E8007FB0A0E8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>4.3</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>AE1FD29DFF98544E1B910A30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8AE2D7974DC61DA3905A878F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AFB5D77030E1B2E085FF3F5F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>72B58BF4A47077355CAEDF66</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>4.3</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B51D0A1CF4EF09B9F7D6B008</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B75708606280131C40F8A4D1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>EDB7C94D55E6D63AA3C3D202</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8581AF61037A11DFC2F04FEB</string>
-			<key>remoteInfo</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews</string>
-		</dict>
-		<key>BEA055EF727639B6C4B64CC6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B51D0A1CF4EF09B9F7D6B008</string>
-				<string>28943371C6909B5A06E51E13</string>
-				<string>3F1C317574622A4AF3F9CE3F</string>
-				<string>F0E89F01914400770695894B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CA574FA33E47FE0BA37B96DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews</string>
-			<key>target</key>
-			<string>8581AF61037A11DFC2F04FEB</string>
-			<key>targetProxy</key>
-			<string>B75708606280131C40F8A4D1</string>
-		</dict>
-		<key>CB0314AAC5E7E8007FB0A0E8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D2329B2CE1CAE15DAACA91EB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>4.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D749826A0E822E4677EA19F0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F73D4DF8AB8EDF79F7802D79</string>
-				<string>53C8CF3920C1D2D0FCF0CC65</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D91E28BB8B8C62C9B7C6009E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-DeceptionAlertViews.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EC1BAA14475926A8AAEC93F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1F3F335C6B97F1DA36BFBC2D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>ECC8D9753C535AC1987536B0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4EF4765E71DC2064C4CC9E12</string>
-				<string>8527B8271E54DD1DD8BE1D8A</string>
-				<string>1F3F335C6B97F1DA36BFBC2D</string>
-				<string>20CA2A156F16A711A6471D42</string>
-				<string>0AB046DF651ECAF75B30320D</string>
-				<string>CB0314AAC5E7E8007FB0A0E8</string>
-				<string>72B58BF4A47077355CAEDF66</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-DeceptionAlertViews</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-DeceptionAlertViews</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EDB7C94D55E6D63AA3C3D202</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>3EC151D520BCCDF3AD0CD132</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>748CD98DFBC8C73225050E6C</string>
-			<key>productRefGroup</key>
-			<string>F48EE4A81F139310223E47D3</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>43F7D5F8F15B7668D0E75011</string>
-				<string>8581AF61037A11DFC2F04FEB</string>
-			</array>
-		</dict>
-		<key>F0E89F01914400770695894B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F48EE4A81F139310223E47D3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D91E28BB8B8C62C9B7C6009E</string>
-				<string>01F5ABED2DF047F0EB50CADB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F73D4DF8AB8EDF79F7802D79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A56AB582AF2FD5497B5B074F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>FEAF013DFCE714FBB4FBE790</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>95CF517D772A3200756503FE</string>
-				<string>A56AB582AF2FD5497B5B074F</string>
-				<string>BEA055EF727639B6C4B64CC6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>DeceptionAlertViews</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>EDB7C94D55E6D63AA3C3D202</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		013C9A9C9ECD4F5E6385282F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE6DC128768DD9EA42B101C /* Foundation.framework */; };
+		163BC9A721BBA0A92D992984 /* AlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95CF517D772A3200756503FE /* AlertView.h */; };
+		53C8CF3920C1D2D0FCF0CC65 /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C317574622A4AF3F9CE3F /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */; };
+		6FF6E656FD1F33E86EBD17C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE6DC128768DD9EA42B101C /* Foundation.framework */; };
+		AE1FD29DFF98544E1B910A30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE2D7974DC61DA3905A878F /* UIKit.framework */; };
+		EC1BAA14475926A8AAEC93F9 /* Pods-DeceptionAlertViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F335C6B97F1DA36BFBC2D /* Pods-DeceptionAlertViews-dummy.m */; };
+		F73D4DF8AB8EDF79F7802D79 /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AB582AF2FD5497B5B074F /* AlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B75708606280131C40F8A4D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB7C94D55E6D63AA3C3D202 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8581AF61037A11DFC2F04FEB;
+			remoteInfo = "Pods-DeceptionAlertViews-DeceptionAlertViews";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F5ABED2DF047F0EB50CADB /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeceptionAlertViews-DeceptionAlertViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB046DF651ECAF75B30320D /* Pods-DeceptionAlertViews-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeceptionAlertViews-resources.sh"; sourceTree = "<group>"; };
+		0CE6DC128768DD9EA42B101C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1F3F335C6B97F1DA36BFBC2D /* Pods-DeceptionAlertViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeceptionAlertViews-dummy.m"; sourceTree = "<group>"; };
+		20CA2A156F16A711A6471D42 /* Pods-DeceptionAlertViews-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeceptionAlertViews-environment.h"; sourceTree = "<group>"; };
+		28943371C6909B5A06E51E13 /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig"; sourceTree = "<group>"; };
+		3F1C317574622A4AF3F9CE3F /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m"; sourceTree = "<group>"; };
+		4EF4765E71DC2064C4CC9E12 /* Pods-DeceptionAlertViews-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeceptionAlertViews-acknowledgements.markdown"; sourceTree = "<group>"; };
+		53D6DC09CCD075C9C83517A6 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		72B58BF4A47077355CAEDF66 /* Pods-DeceptionAlertViews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews.release.xcconfig"; sourceTree = "<group>"; };
+		8527B8271E54DD1DD8BE1D8A /* Pods-DeceptionAlertViews-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeceptionAlertViews-acknowledgements.plist"; sourceTree = "<group>"; };
+		8AE2D7974DC61DA3905A878F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		95CF517D772A3200756503FE /* AlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlertView.h; path = Pod/Classes/AlertView.h; sourceTree = "<group>"; };
+		A56AB582AF2FD5497B5B074F /* AlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlertView.m; path = Pod/Classes/AlertView.m; sourceTree = "<group>"; };
+		B51D0A1CF4EF09B9F7D6B008 /* Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig"; sourceTree = "<group>"; };
+		CB0314AAC5E7E8007FB0A0E8 /* Pods-DeceptionAlertViews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeceptionAlertViews.debug.xcconfig"; sourceTree = "<group>"; };
+		D91E28BB8B8C62C9B7C6009E /* libPods-DeceptionAlertViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DeceptionAlertViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E89F01914400770695894B /* Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A592B75556F470F6D8130FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				013C9A9C9ECD4F5E6385282F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE1481890238D9754C3E1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF6E656FD1F33E86EBD17C0 /* Foundation.framework in Frameworks */,
+				AE1FD29DFF98544E1B910A30 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22A874C2DF42FD60984F0C0B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECC8D9753C535AC1987536B0 /* Pods-DeceptionAlertViews */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		250C2D6FABC2C6E183EF159F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0CE6DC128768DD9EA42B101C /* Foundation.framework */,
+				8AE2D7974DC61DA3905A878F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		55D8CD27D42E1A69613DF78C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				250C2D6FABC2C6E183EF159F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		748CD98DFBC8C73225050E6C = {
+			isa = PBXGroup;
+			children = (
+				53D6DC09CCD075C9C83517A6 /* Podfile */,
+				9AADB77070AB28D3FC1D0139 /* Development Pods */,
+				55D8CD27D42E1A69613DF78C /* Frameworks */,
+				F48EE4A81F139310223E47D3 /* Products */,
+				22A874C2DF42FD60984F0C0B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9AADB77070AB28D3FC1D0139 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF013DFCE714FBB4FBE790 /* DeceptionAlertViews */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BEA055EF727639B6C4B64CC6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B51D0A1CF4EF09B9F7D6B008 /* Pods-DeceptionAlertViews-DeceptionAlertViews.xcconfig */,
+				28943371C6909B5A06E51E13 /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */,
+				3F1C317574622A4AF3F9CE3F /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m */,
+				F0E89F01914400770695894B /* Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews";
+			sourceTree = "<group>";
+		};
+		ECC8D9753C535AC1987536B0 /* Pods-DeceptionAlertViews */ = {
+			isa = PBXGroup;
+			children = (
+				4EF4765E71DC2064C4CC9E12 /* Pods-DeceptionAlertViews-acknowledgements.markdown */,
+				8527B8271E54DD1DD8BE1D8A /* Pods-DeceptionAlertViews-acknowledgements.plist */,
+				1F3F335C6B97F1DA36BFBC2D /* Pods-DeceptionAlertViews-dummy.m */,
+				20CA2A156F16A711A6471D42 /* Pods-DeceptionAlertViews-environment.h */,
+				0AB046DF651ECAF75B30320D /* Pods-DeceptionAlertViews-resources.sh */,
+				CB0314AAC5E7E8007FB0A0E8 /* Pods-DeceptionAlertViews.debug.xcconfig */,
+				72B58BF4A47077355CAEDF66 /* Pods-DeceptionAlertViews.release.xcconfig */,
+			);
+			name = "Pods-DeceptionAlertViews";
+			path = "Target Support Files/Pods-DeceptionAlertViews";
+			sourceTree = "<group>";
+		};
+		F48EE4A81F139310223E47D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D91E28BB8B8C62C9B7C6009E /* libPods-DeceptionAlertViews.a */,
+				01F5ABED2DF047F0EB50CADB /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEAF013DFCE714FBB4FBE790 /* DeceptionAlertViews */ = {
+			isa = PBXGroup;
+			children = (
+				95CF517D772A3200756503FE /* AlertView.h */,
+				A56AB582AF2FD5497B5B074F /* AlertView.m */,
+				BEA055EF727639B6C4B64CC6 /* Support Files */,
+			);
+			name = DeceptionAlertViews;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4A06CA3AFCEB2D24B3EB458D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				163BC9A721BBA0A92D992984 /* AlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		43F7D5F8F15B7668D0E75011 /* Pods-DeceptionAlertViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121A472A4DFA161E8148D13F /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews" */;
+			buildPhases = (
+				0B72361CFBCE117412D01D30 /* Sources */,
+				3A592B75556F470F6D8130FF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA574FA33E47FE0BA37B96DB /* PBXTargetDependency */,
+			);
+			name = "Pods-DeceptionAlertViews";
+			productName = "Pods-DeceptionAlertViews";
+			productReference = D91E28BB8B8C62C9B7C6009E /* libPods-DeceptionAlertViews.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8581AF61037A11DFC2F04FEB /* Pods-DeceptionAlertViews-DeceptionAlertViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD07BD20C63D7DD17097AE2 /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews-DeceptionAlertViews" */;
+			buildPhases = (
+				D749826A0E822E4677EA19F0 /* Sources */,
+				9BE1481890238D9754C3E1B7 /* Frameworks */,
+				4A06CA3AFCEB2D24B3EB458D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-DeceptionAlertViews-DeceptionAlertViews";
+			productName = "Pods-DeceptionAlertViews-DeceptionAlertViews";
+			productReference = 01F5ABED2DF047F0EB50CADB /* libPods-DeceptionAlertViews-DeceptionAlertViews.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDB7C94D55E6D63AA3C3D202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 3EC151D520BCCDF3AD0CD132 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 748CD98DFBC8C73225050E6C;
+			productRefGroup = F48EE4A81F139310223E47D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43F7D5F8F15B7668D0E75011 /* Pods-DeceptionAlertViews */,
+				8581AF61037A11DFC2F04FEB /* Pods-DeceptionAlertViews-DeceptionAlertViews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B72361CFBCE117412D01D30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1BAA14475926A8AAEC93F9 /* Pods-DeceptionAlertViews-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D749826A0E822E4677EA19F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F73D4DF8AB8EDF79F7802D79 /* AlertView.m in Sources */,
+				53C8CF3920C1D2D0FCF0CC65 /* Pods-DeceptionAlertViews-DeceptionAlertViews-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA574FA33E47FE0BA37B96DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DeceptionAlertViews-DeceptionAlertViews";
+			target = 8581AF61037A11DFC2F04FEB /* Pods-DeceptionAlertViews-DeceptionAlertViews */;
+			targetProxy = B75708606280131C40F8A4D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03033C42F1715653815FDA78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28943371C6909B5A06E51E13 /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EE24270812849EBE5A89C17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28943371C6909B5A06E51E13 /* Pods-DeceptionAlertViews-DeceptionAlertViews-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DeceptionAlertViews-DeceptionAlertViews/Pods-DeceptionAlertViews-DeceptionAlertViews-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A8E079D5FBC2F4C8694D6837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A976F7ADA8FBD60B4E0F4473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0314AAC5E7E8007FB0A0E8 /* Pods-DeceptionAlertViews.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AFB5D77030E1B2E085FF3F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B58BF4A47077355CAEDF66 /* Pods-DeceptionAlertViews.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2329B2CE1CAE15DAACA91EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		121A472A4DFA161E8148D13F /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A976F7ADA8FBD60B4E0F4473 /* Debug */,
+				AFB5D77030E1B2E085FF3F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EC151D520BCCDF3AD0CD132 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2329B2CE1CAE15DAACA91EB /* Debug */,
+				A8E079D5FBC2F4C8694D6837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD07BD20C63D7DD17097AE2 /* Build configuration list for PBXNativeTarget "Pods-DeceptionAlertViews-DeceptionAlertViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE24270812849EBE5A89C17 /* Debug */,
+				03033C42F1715653815FDA78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDB7C94D55E6D63AA3C3D202 /* Project object */;
+}

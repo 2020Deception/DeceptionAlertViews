@@ -10,7 +10,7 @@
 
 static NSString * const kEmptyString = @"";
 
-@interface AlertView()<UIAlertViewDelegate>
+@interface AlertView()
 
 @property NSArray *completionBlocks;
 @property (copy, nonatomic) AlertCompletionBlock dismissalBlock;
@@ -18,49 +18,6 @@ static NSString * const kEmptyString = @"";
 @end
 
 @implementation AlertView
-
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex==alertView.cancelButtonIndex) {
-        if (self.cancelBlock) {
-            void (^cancelBlock)() = self.cancelBlock;
-            cancelBlock();
-        }
-    } else if (self.completionBlocks[buttonIndex-1]) {
-        void (^completionBlock)() = self.completionBlocks[buttonIndex-1];
-        completionBlock();
-    }
-}
-
-#pragma mark - alert view
-/*!
- * creates UIAlertView
- @param title
- @param message
- @param alertCancelBlock the block called if the cancel button is pressed
- @param completionBlocks the array of completion blocks should go in order from cancel block to each index starting @0 from the otherButtonTitles array. These are actual blocks in the array - > ^{}
- @param cancelButtonTitle the cancel button title as an NSString
- @param otherButtonTitles the array of titles as NSStrings for the other button titles
- */
-- (instancetype)initWithTitle:(NSString * _Nullable)title
-                      message:(NSString * _Nullable)message
-                  cancelBlock:(AlertCancelBlock _Nullable)alertCancelBlock
-             completionBlocks:(NSArray * _Nullable)completionBlocks
-            cancelButtonTitle:(NSString * _Nullable)cancelButtonTitle
-            otherButtonTitles:(NSArray * _Nullable)otherButtonTitles {
-    if ((self = [self initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil])) {
-        self.delegate = self;
-        self.cancelBlock = alertCancelBlock ? : ^{};
-        self.completionBlocks = completionBlocks ? : @[];
-        __unsafe_unretained typeof(self) weakSelf = self;
-        [completionBlocks enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            [strongSelf addButtonWithTitle:[(NSString *)otherButtonTitles[idx] length] > 0 ? otherButtonTitles[idx] : @""];
-        }];
-    }
-    return self;
-}
 
 #pragma mark - alert controller
 /*!
@@ -181,10 +138,7 @@ static NSString * const kEmptyString = @"";
                                               type:(UIAlertControllerStyle)type
                                           animated:animated
                                    completionBlock:alertCompletionBlock];
-        
-        (NSClassFromString(@"UIAlertController")) ?
-        [presentingViewController presentViewController:(UIAlertController *)alert animated:animated completion:alertCompletionBlock] :
-        [(UIAlertView *)alert show];
+        [presentingViewController presentViewController:(UIAlertController *)alert animated:animated completion:alertCompletionBlock];
     });
 }
 
@@ -198,7 +152,7 @@ static NSString * const kEmptyString = @"";
                       type:(UIAlertControllerStyle)type
                   animated:(BOOL)animated
            completionBlock:(AlertCompletionBlock _Nullable)alertCompletionBlock {
-
+    
 #ifdef DEBUG
     for (NSString *title in otherButtonTitles)
         if (title.length == 0)
@@ -208,21 +162,15 @@ static NSString * const kEmptyString = @"";
     if (completionBlocks.count != otherButtonTitles.count)
         NSLog(@"WARNING : the count of the completionBlocks array should match your count of the otherButtonTitles array.");
 #endif
-    return (NSClassFromString(@"UIAlertController")) ?
-    [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
-                                      message:message.length > 0 ? message : kEmptyString
-                                  cancelBlock:alertCancelBlock
-                             completionBlocks:completionBlocks
-                            cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
-                            otherButtonTitles:otherButtonTitles
-                                         type:(UIAlertControllerStyle)type] :
     
-    [[AlertView alloc]initWithTitle:title.length > 0 ? title : kEmptyString
-                            message:message.length > 0 ? message : kEmptyString
-                        cancelBlock:alertCancelBlock
-                   completionBlocks:completionBlocks
-                  cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
-                  otherButtonTitles:otherButtonTitles];
+#pragma mark - alert view
+    return [AlertView createAlertControllerWithTitle:title.length > 0 ? title : kEmptyString
+                                             message:message.length > 0 ? message : kEmptyString
+                                         cancelBlock:alertCancelBlock
+                                    completionBlocks:completionBlocks
+                                   cancelButtonTitle:cancelButtonTitle.length > 0 ? cancelButtonTitle : kEmptyString
+                                   otherButtonTitles:otherButtonTitles
+                                                type:(UIAlertControllerStyle)type];
 }
 
 @end
